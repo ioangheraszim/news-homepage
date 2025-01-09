@@ -113,6 +113,10 @@ a {
     width: 100%;
 }
 
+.nav__menu li a:hover {
+    color: var(--soft-orange);
+}
+
 .main {
     padding: .5rem;
 }
@@ -143,13 +147,17 @@ a {
 
 .feature__button {
     margin: .5rem 0;
-    padding: .7rem 2rem;
-    border: 1px solid var(--soft-red);
+    padding: 1rem 2rem;
     background-color: var(--soft-red);
     font-size: .95rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .25rem;
+}
+
+.feature__button:hover {
+    color: var(--off-white);
+    background-color: var(--very-dark-blue);
 }
 
 .news {
@@ -170,9 +178,15 @@ a {
 }
 
 .news__item-title {
+    padding: 0;
+    color: var(--off-white);
     font-size: 1.2rem;
     font-weight: 700;
     margin: 1rem 0;
+}
+
+.news__item-title:hover{
+    color: var(--soft-orange);
 }
 
 .news__item-description {
@@ -203,12 +217,23 @@ a {
 }
 
 .highlight__title {
+    padding: 0;
     font-weight: 800;
     margin: .5rem;
     color: var(--very-dark-blue);
 }
 
+.highlight__title:hover {
+    color: var(--soft-red);
+}
+
 .highlight__description {
     color: var(--dark-grayish-blue);
     margin: 0 .5rem ;
+}
+
+@media (min-width: 720px) {
+    .container {
+        width: min(100% - 1rem, 1080px);
+    }
 }
