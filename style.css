@@ -21,6 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", serif;
+
 }
 
 ul {
@@ -49,6 +50,7 @@ a {
 .container {
     width: min(100% - 1rem, 375px);
     margin: 0 auto;
+    background-color: var(--off-white);
 }
 
 .navbar {
@@ -232,8 +234,121 @@ a {
     margin: 0 .5rem ;
 }
 
+/* Desktop size media query */
+
 @media (min-width: 720px) {
-    .container {
-        width: min(100% - 1rem, 1080px);
+    html, body {
+        height: auto;
+        width: auto;
+        overflow-x: hidden;
     }
+
+    .container {
+        width: min(100% - 1rem, 1000px);
+    }
+
+    .nav__overlay {
+        display: none;
+    }
+
+    .nav__logo {
+        width: 5%;
+    }
+
+    .navbar {
+        display: flex;
+        padding: 0rem;
+        position: static;
+    }
+
+    .navbar {
+        position: static;
+    }
+
+    .main {
+        padding: 0rem;
+    }
+
+    .nav__menu {
+        position: static;
+        transform: translateX(0);
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav__menu li {
+        padding: 1rem 0;
+    }
+
+    .nav__menu li a {
+        padding: 1rem 0 2rem 2rem;
+    }
+
+    .nav__menu-button {
+        display: none;
+    }
+
+    .main__feature {
+        display: flex;
+        justify-content: center;
+    }
+
+    .feature__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .feature__title-container {
+        padding: 0;
+        margin: 0;   
+        width: 80%; 
+    }
+    .feature__title {
+        line-height: 3.5rem;
+        font-size: 3rem;
+        font-weight: 800;
+        padding: 1rem 0rem 0 0;
+    }
+
+    .feature__description-container {
+        padding: 1rem 0 0 0;
+        width: 100%;
+    }
+
+    .feature__description {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: auto;
+        padding: .5rem 0;
+    }
+
+    .feature__button {
+        margin: 1rem 0 0 0;
+    }
+
+    .news {
+        margin: 0;
+        margin-left: 2rem;
+        min-width: 350px;
+        max-height: 482px;
+    }
+
+    .feature__image .feature__image-mobile {
+        display: none;
+    }
+
+    .feature__image .feature__image-desktop {
+        display: block;
+        width: 100%;
+    }
+
+    .main__highlight {
+        display: flex;
+
+        margin: 4rem 0;
+    }
+
 }
